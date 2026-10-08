@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="HardcodedText,Autofill">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertidor de Moneda"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monto a convertir (COP):" />
+
+    <EditText
+        android:id="@+id/etMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Ej. 100000"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertir a:"
+        android:paddingTop="12dp" />
+
+    <RadioGroup
+        android:id="@+id/rgMonedas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dólares (USD)"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbEUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euros (EUR)" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:onClick="convertirMoneda"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:gravity="center" />
+
+</LinearLayout>
